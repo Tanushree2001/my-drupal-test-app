@@ -1,0 +1,7 @@
+uuid: 2ef51110-2748-42b4-be17-9ea7e2931263
+langcode: en
+status: true
+dependencies: {  }
+name: '800_400'
+label: '800*400'
+effects: {  }

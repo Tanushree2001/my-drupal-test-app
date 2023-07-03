@@ -1,0 +1,36 @@
+uuid: 5064c942-8fcc-44d0-a2b7-7b9d2308b43b
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.custom-header-menu
+  module:
+    - system
+    - user
+  theme:
+    - olivero
+id: customheadermenu_3
+theme: olivero
+region: footer_top
+weight: -11
+provider: null
+plugin: 'system_menu_block:custom-header-menu'
+settings:
+  id: 'system_menu_block:custom-header-menu'
+  label: Categories
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 5
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator

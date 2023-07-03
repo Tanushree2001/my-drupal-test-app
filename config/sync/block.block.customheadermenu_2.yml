@@ -1,0 +1,40 @@
+uuid: f48a742f-8828-4731-9541-8b6e6509921f
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.custom-header-menu
+  module:
+    - system
+    - user
+  theme:
+    - olivero
+id: customheadermenu_2
+theme: olivero
+region: content
+weight: -9
+provider: null
+plugin: 'system_menu_block:custom-header-menu'
+settings:
+  id: 'system_menu_block:custom-header-menu'
+  label: 'Categories-2 Block'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator
