@@ -1,0 +1,36 @@
+uuid: cc6dc8d3-a505-4bf7-91ed-cd7dba9599f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.custom-menus-taxonomy
+  module:
+    - system
+    - user
+  theme:
+    - olivero
+id: custommenustaxonomy
+theme: olivero
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:custom-menus-taxonomy'
+settings:
+  id: 'system_menu_block:custom-menus-taxonomy'
+  label: 4-random-categories
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator
